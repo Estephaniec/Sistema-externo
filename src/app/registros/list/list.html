@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="top-bar">
+    <div class="sistema-select">
+      <mat-form-field appearance="outline">
+        <mat-label>Sistema</mat-label>
+        <mat-select [(value)]="sistemaId">
+          <mat-option *ngFor="let s of sistemas" [value]="s.id">
+            {{ s.descripcion }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="acciones">
+      <button mat-stroked-button color="primary" class="oval-btn" (click)="abrirAgregar()" [disabled]="!sistemaId">
+        Agregar registro
+      </button>
+    </div>
+  </div>
+</div>

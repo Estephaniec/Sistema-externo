@@ -1,0 +1,60 @@
+<h2 mat-dialog-title>Nuevo registro de Bitácora</h2>
+
+<mat-dialog-content class="form-content">
+  <div *ngIf="mensaje" class="alerta">{{ mensaje }}</div>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Usuario</mat-label>
+    <mat-select [(ngModel)]="registro.idUsuario">
+      <mat-option *ngFor="let u of usuarios" [value]="u.id">
+        {{ u.usuario }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Operación</mat-label>
+    <mat-select [(ngModel)]="registro.idOperacion">
+      <mat-option *ngFor="let o of operaciones" [value]="o.id">
+        {{ o.descripcion }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Comando</mat-label>
+    <mat-select [(ngModel)]="registro.idComando">
+      <mat-option *ngFor="let c of comandos" [value]="c.id">
+        {{ c.comando }} - {{ c.descripcion }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Oficina</mat-label>
+    <mat-select [(ngModel)]="registro.idOficina">
+      <mat-option *ngFor="let o of oficinas" [value]="o.id">
+        {{ o.nombreoficina }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Tabla</mat-label>
+    <mat-select [(ngModel)]="registro.tabla">
+      <mat-option *ngFor="let t of tablas" [value]="t">
+        {{ t }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Entrada</mat-label>
+    <textarea matInput rows="3" [(ngModel)]="registro.entrada"></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" (click)="cancelar()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>
