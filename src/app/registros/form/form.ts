@@ -107,6 +107,7 @@ export class FormComponent implements OnInit {
   }
 
   guardar() {
+    console.log('Registro a guardar:', this.registro);
     if (!this.registro.idUsuario || !this.registro.idOperacion || !this.registro.idSistema ||
         !this.registro.idOficina || !this.registro.tabla || !this.registro.entrada || !this.registro.idComando) {
       this.mensaje = 'Debe completar todos los campos obligatorios.';    

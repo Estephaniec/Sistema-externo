@@ -1,14 +1,14 @@
 import {
-  _CdkPrivateStyleLoader
-} from "./chunk-GWLB3R5X.js";
-import {
   BidiModule
 } from "./chunk-ULNRP4ZK.js";
+import {
+  _CdkPrivateStyleLoader
+} from "./chunk-GWLB3R5X.js";
 import {
   Platform,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-TAZRWNBH.js";
+} from "./chunk-34FISDCR.js";
 import {
   APP_ID,
   BehaviorSubject,
@@ -3062,6 +3062,19 @@ var ConfigurableFocusTrapFactory = class _ConfigurableFocusTrapFactory {
   }], () => [], null);
 })();
 
+// node_modules/@angular/cdk/fesm2022/css-pixel-value.mjs
+function coerceCssPixelValue(value) {
+  if (value == null) {
+    return "";
+  }
+  return typeof value === "string" ? value : `${value}px`;
+}
+
+// node_modules/@angular/cdk/fesm2022/coercion.mjs
+function coerceBooleanProperty(value) {
+  return value != null && `${value}` !== "false";
+}
+
 // node_modules/@angular/material/fesm2022/common-module.mjs
 var MATERIAL_SANITY_CHECKS = new InjectionToken("mat-sanity-checks", {
   providedIn: "root",
@@ -3093,22 +3106,7 @@ var MatCommonModule = class _MatCommonModule {
   }], () => [], null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/css-pixel-value.mjs
-function coerceCssPixelValue(value) {
-  if (value == null) {
-    return "";
-  }
-  return typeof value === "string" ? value : `${value}px`;
-}
-
-// node_modules/@angular/cdk/fesm2022/coercion.mjs
-function coerceBooleanProperty(value) {
-  return value != null && `${value}` !== "false";
-}
-
 export {
-  coerceArray,
-  MediaMatcher,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   ENTER,
@@ -3124,6 +3122,8 @@ export {
   normalizePassiveListenerOptions,
   FocusMonitor,
   _VisuallyHiddenLoader,
+  coerceArray,
+  MediaMatcher,
   ObserversModule,
   InteractivityChecker,
   FocusTrapFactory,
@@ -3134,9 +3134,9 @@ export {
   ActiveDescendantKeyManager,
   addAriaReferencedId,
   removeAriaReferencedId,
-  MATERIAL_SANITY_CHECKS,
-  MatCommonModule,
   coerceCssPixelValue,
-  coerceBooleanProperty
+  coerceBooleanProperty,
+  MATERIAL_SANITY_CHECKS,
+  MatCommonModule
 };
-//# sourceMappingURL=chunk-5POIPRY7.js.map
+//# sourceMappingURL=chunk-TUH7757Q.js.map
